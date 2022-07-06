@@ -1,0 +1,320 @@
+*{
+    font-family: 'Trispace', sans-serif;
+    font-size: 20px;
+}
+
+/*.main{
+    position: relative;
+}*/
+
+body{
+    background-color: #000000ef;
+    color: white;
+}
+
+.container{
+    width: 90%;
+    height: 90%;
+    max-height: 1080px;
+    max-width: 1920px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+
+    grid-template-areas: "header header"
+                          "form message"
+                          "footer footer";
+                                                    
+
+}
+
+.header{
+    /*grid-column-start: 1;*/
+    /*grid-column-end: -1;*/
+    height: 80px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+}
+
+h1 {
+    font-size: 2em;
+    font-family: 'Trispace', sans-serif;
+    font-weight: bold;
+}
+
+label{
+    font-family:'Trispace', sans-serif;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+
+    grid-area: form;
+
+}
+
+
+.form > .textouser{
+    height: 450px;
+
+}
+
+.to-text{
+    height: 97%;
+    width: 99%;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    color: aqua;
+    text-transform: lowercase;
+}
+
+.to-text:focus{
+    border: none;
+    outline: none;
+}
+
+::placeholder{
+    color: aqua;
+    opacity: 60%;
+}
+
+.form > .form-group{
+    height: 100%;
+    color: darkorange;
+    opacity: 70%;
+}
+
+.form > .div-buttons{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.button{
+    border: none;
+    background-color: transparent;
+    color: chartreuse;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: rgb(255, 255, 255);
+}
+
+.div-buttons > .btdesencript{
+    justify-self: end;
+}
+
+.message-box{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, auto);
+
+    grid-area: message;
+}
+
+.message-box > .message-box-div{
+    height: 469px;
+}
+
+.div-message{
+    height: 93%;
+    width: 99%;
+    resize: none;
+    border: none;
+    background-color: transparent;
+}
+
+.div-message:focus{
+    border: none;
+    outline: none;
+}
+
+.message-box > .btcopy{
+    display: flex;
+    justify-content: end;
+}
+
+.divdesaparece{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+
+    grid-area: message;
+}
+
+.candado{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lock{
+    height: 50%;
+    width: 30%;
+}
+
+.sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 0, 242);
+    font-size: 1.3em;
+}
+
+.subsub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family:'Trispace', sans-serif;
+    color: rgb(212, 0, 255);
+    font-size: 1em;
+}
+
+.footer{
+    /*grid-column-start: 1;*/
+    /*grid-column-end: -1;*/
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    font-weight: bold;
+    opacity: 60%;
+    grid-area: footer;
+    
+    margin-top: 20px;
+}
+
+
+.footer > .autor{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > .linkedin{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > .github{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > .alura{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    color: rgb(201, 143, 255);
+    text-shadow: white 2px;
+    font-size: 1.2em;
+    font-family: 'Trispace', sans-serif;
+}
+
+h2{
+    font-size: 1em;
+    font-family: 'Trispace', sans-serif;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+#message{
+    color: rgb(238, 255, 0);
+}
+
+@media screen and (max-width: 768px){
+
+    *{
+        font-size: 1.05em;
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, auto);
+        height: 100%;
+        /*grid-area: form;*/
+    }
+    
+    .message-box{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, auto);
+        height: 100%;
+        /*grid-area: message;*/
+    }
+    
+
+    .container{
+
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, auto);
+        grid-gap: 10px;
+    
+        grid-template-areas: "header"
+                              "form"
+                              "message"
+                              "footer";
+
+    }
+
+    .form > .textouser{
+        height: 200px;
+    
+    }
+
+    .message-box > .message-box-div{
+        height: 200px;
+    }
+
+    .form > .div-buttons{
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        padding-top: 10px;
+    }
+
+    .button{
+        font-size: 1.05em;
+    }
+
+    h1 {
+        font-size: 1.7em;
+        text-align: center;
+    }
+
+    .sub{
+        font-size: 1em;
+    }
+    
+    .subsub{
+        font-size: .8em;
+    }
+    
+}

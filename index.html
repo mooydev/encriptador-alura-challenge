@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@100&display=swap" rel="stylesheet">
+  <link rel="icon" href="encriptador-ico.png" type="image/x-icon">
+  <title>Encriptador</title>
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+        <h1>Encriptador | Alura Challenge 1 - ONE Oracle</h1>
+    </header>
+        <form action class="form">
+          <div class="textouser">
+            <textarea type="text" name="input-text" placeholder="Ingresa aquí texto a encriptar" class="to-text" id="text-to" maxlength="120"></textarea>
+          </div>
+          <div class="form-group">
+            <img src="img/!.png" class="alerta">
+            <label for="input-text">solo minusculas, sin acentos</label>
+          </div>
+          <div class="div-buttons">
+            <div class="btencript">
+                <input class="button" type="submit" value="> encriptar <" id="bt-encript">
+            </div>
+            <div class="btdesencript">
+                <input class="button" type="submit" value="> desencriptar <" id="bt-desencript"> 
+            </div>
+            </div>
+        </form>
+      <div class="message-box" id="div-aparece" style="display: none;">
+                <div class="message-box-div" >
+                    <textarea type="text" class="div-message" id="message" placeholder="nigun mensaje que mostrar" readonly rows=""></textarea>
+                </div>
+                <div class="btcopy">
+                    <input class="button" type="submit" value="> copiar <" id="bt-copy">
+                </div> 
+        </div>
+            <div class="divdesaparece" id="div-desaparece">
+                <div class="candado">
+                    <img src="img/candado-encriptador.svg" id="lock">
+                </div>
+                <div class="sub">
+                    <h2>ningun mensaje encontrado</h2>
+                </div>
+                <div class="subsub">
+                    <h3>ingresa el texto que desees encirptar o desencriptar</h3>
+                </div>    
+            </div>          
+        <footer class="footer">
+            <div class="autor">
+                <h2> &copy; Moisés Martinez Reyes</h2>
+            </div>
+            <div class="linkedin">
+                <a href="https://www.linkedin.com/in/mois%C3%A9s-mart%C3%ADnez-reyes-339234244/">Linkedin</a>
+            </div>
+            <div class="github">
+                <a href="https://github.com/mooydev">GitHub </a>
+            </div>
+            <div class="alura">
+                <h2>Alura - ONE Oracle</h2>
+            </div>    
+        </footer>
+    </div>
+      <script src="js/script.js"></script>
+  </body>      
+</html>
